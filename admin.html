@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Panel Pengurus — Portal Informasi Warga Semidang Alas</title>
   <meta name="description" content="Panel Pengurus Resmi Portal Informasi Warga RT 003 / RW 002 Desa Semidang Alas.">
+  <meta name="theme-color" content="#0f172a">
   <link rel="icon" href="public/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,20 +21,23 @@
 </head>
 <body class="bg-slate-100 text-slate-900 min-h-screen antialiased">
   
-  <header class="bg-slate-950 text-white sticky top-0 z-40 border-b border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+  <!-- Header Admin -->
+  <header class="bg-slate-950 text-white sticky top-0 z-40 border-b border-slate-800 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-3">
       <div class="flex items-center gap-3">
-        <img src="public/logo-pagaralam.png" alt="Logo Komunitas" class="w-9 h-9 rounded-xl bg-white object-cover">
+        <div class="w-9 h-9 rounded-xl bg-white flex items-center justify-center overflow-hidden shrink-0 shadow">
+          <img src="public/logo-pagaralam.png" alt="Logo Komunitas" class="w-full h-full object-cover">
+        </div>
         <div>
-          <p class="font-extrabold text-sm sm:text-base leading-tight">Panel Pengurus RT 003 / RW 002</p>
-          <p class="text-xs text-slate-400">Portal Informasi Warga Semidang Alas</p>
+          <p class="font-extrabold text-xs sm:text-base leading-tight">Panel Pengurus RT 003</p>
+          <p class="text-[11px] sm:text-xs text-slate-400">Semidang Alas</p>
         </div>
       </div>
-      <a href="index.html" class="text-xs sm:text-sm px-4 py-2 rounded-xl bg-white/10 border border-white/15 hover:bg-white/20 font-semibold transition-all">Lihat Website Portal</a>
+      <a href="index.html" class="text-xs sm:text-sm px-3.5 py-2 rounded-xl bg-white/10 border border-white/15 hover:bg-white/20 font-semibold transition-all shrink-0">Lihat Website</a>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
     
     <!-- Login Card -->
     <section id="login-card" class="max-w-md mx-auto bg-white border border-slate-200/80 rounded-3xl shadow-soft p-6 sm:p-8">
@@ -50,9 +54,9 @@
       <div class="space-y-4">
         <div>
           <label for="admin-key" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Kata Sandi Pengurus</label>
-          <input id="admin-key" type="password" autocomplete="current-password" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-4 focus:ring-sky-100 focus:border-sky-500 transition-all text-slate-900 placeholder:text-slate-400" placeholder="Masukkan kata sandi rahasia">
+          <input id="admin-key" type="password" autocomplete="current-password" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-4 focus:ring-sky-100 focus:border-sky-500 transition-all text-slate-900 placeholder:text-slate-400 text-sm" placeholder="Masukkan kata sandi rahasia">
         </div>
-        <button id="login-btn" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 text-white font-bold hover:bg-sky-700 active:scale-[0.99] transition-all shadow-md">
+        <button id="login-btn" class="w-full px-4 py-3.5 rounded-xl bg-slate-900 text-white font-bold hover:bg-sky-700 active:scale-[0.99] transition-all shadow-md text-sm">
           Masuk Sekarang
         </button>
       </div>
@@ -60,46 +64,46 @@
     </section>
 
     <!-- Admin App Content -->
-    <section id="admin-app" class="hidden space-y-8">
+    <section id="admin-app" class="hidden space-y-6 sm:space-y-8">
       
       <!-- Top Bar / Admin Status -->
-      <div class="bg-white border border-slate-200/80 rounded-3xl p-6 shadow-soft flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="bg-white border border-slate-200/80 rounded-3xl p-5 sm:p-6 shadow-soft flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <span class="text-xs font-extrabold text-sky-600 uppercase tracking-wider">Dashboard Pengurus</span>
-          <h1 class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">Kelola Informasi Warga</h1>
+          <h1 class="text-xl sm:text-3xl font-black text-slate-900 mt-0.5">Kelola Informasi Warga</h1>
           <p id="admin-status" class="text-xs sm:text-sm text-slate-500 mt-1">Status: Memuat data...</p>
         </div>
-        <div class="flex items-center gap-3 shrink-0">
-          <button id="refresh-btn" class="px-4 py-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 font-bold hover:bg-slate-200 transition-all text-xs sm:text-sm">
-            🔄 Muat Ulang Data
+        <div class="flex items-center gap-2.5 shrink-0">
+          <button id="refresh-btn" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 font-bold hover:bg-slate-200 transition-all text-xs sm:text-sm">
+            🔄 Muat Ulang
           </button>
-          <button id="logout-btn" class="px-4 py-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 font-bold hover:bg-rose-100 transition-all text-xs sm:text-sm">
-            Keluar Panel
+          <button id="logout-btn" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 font-bold hover:bg-rose-100 transition-all text-xs sm:text-sm">
+            Keluar
           </button>
         </div>
       </div>
 
       <!-- Navigation Tabs for Admin -->
-      <div class="flex border-b border-slate-200 overflow-x-auto gap-2">
-        <button id="tab-btn-announcement" class="px-5 py-3 font-bold text-sm border-b-2 border-sky-600 text-sky-600 whitespace-nowrap focus:outline-none">
-          📢 Kelola Pengumuman
+      <div class="flex border-b border-slate-200 overflow-x-auto gap-2 pb-px scrollbar-none">
+        <button id="tab-btn-announcement" class="px-4 sm:px-5 py-3 font-bold text-xs sm:text-sm border-b-2 border-sky-600 text-sky-600 whitespace-nowrap focus:outline-none">
+          📢 Pengumuman
         </button>
-        <button id="tab-btn-schedule" class="px-5 py-3 font-bold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-800 whitespace-nowrap focus:outline-none">
+        <button id="tab-btn-schedule" class="px-4 sm:px-5 py-3 font-bold text-xs sm:text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-800 whitespace-nowrap focus:outline-none">
           🗓️ Agenda & Ronda
         </button>
-        <button id="tab-btn-finance" class="px-5 py-3 font-bold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-800 whitespace-nowrap focus:outline-none">
+        <button id="tab-btn-finance" class="px-4 sm:px-5 py-3 font-bold text-xs sm:text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-800 whitespace-nowrap focus:outline-none">
           💰 Transparansi Kas
         </button>
       </div>
 
       <!-- TAB 1: PENGUMUMAN -->
-      <div id="tab-content-announcement" class="space-y-8">
-        <section class="bg-white border border-slate-200/80 rounded-3xl shadow-soft p-6">
+      <div id="tab-content-announcement" class="space-y-6">
+        <section class="bg-white border border-slate-200/80 rounded-3xl shadow-soft p-5 sm:p-6">
           <div class="mb-5 pb-3 border-b border-slate-100">
-            <h2 class="text-xl font-black text-slate-900">Tambah Pengumuman Baru</h2>
+            <h2 class="text-lg sm:text-xl font-black text-slate-900">Tambah Pengumuman Baru</h2>
             <p class="text-xs text-slate-500 mt-0.5">Pengumuman akan langsung tampil pada halaman depan portal warga.</p>
           </div>
-          <form id="announcement-form" class="space-y-4">
+          <form id="announcement-form" class="space-y-4 text-sm">
             <div>
               <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Judul Pengumuman</label>
               <input name="title" required maxlength="120" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-200" placeholder="Contoh: Gotong Royong Kebersihan Lingkungan">
@@ -135,7 +139,7 @@
 
         <section class="bg-white border border-slate-200/80 rounded-3xl shadow-soft overflow-hidden">
           <div class="p-5 border-b border-slate-100 flex items-center justify-between">
-            <h2 class="font-black text-slate-900">Daftar Pengumuman Aktif</h2>
+            <h2 class="font-black text-slate-900 text-sm sm:text-base">Daftar Pengumuman Aktif</h2>
             <span id="announcement-total" class="text-xs font-semibold px-3 py-1 bg-slate-100 rounded-full text-slate-600">0 Item</span>
           </div>
           <div id="admin-announcement-list" class="divide-y divide-slate-100"></div>
@@ -143,13 +147,13 @@
       </div>
 
       <!-- TAB 2: KEGIATAN & RONDA -->
-      <div id="tab-content-schedule" class="space-y-8 hidden">
-        <section class="bg-white border border-slate-200/80 rounded-3xl shadow-soft p-6">
+      <div id="tab-content-schedule" class="space-y-6 hidden">
+        <section class="bg-white border border-slate-200/80 rounded-3xl shadow-soft p-5 sm:p-6">
           <div class="mb-5 pb-3 border-b border-slate-100">
-            <h2 class="text-xl font-black text-slate-900">Tambah Agenda Kegiatan / Ronda</h2>
+            <h2 class="text-lg sm:text-xl font-black text-slate-900">Tambah Agenda Kegiatan / Ronda</h2>
             <p class="text-xs text-slate-500 mt-0.5">Jadwal kegiatan atau jadwal ronda malam warga.</p>
           </div>
-          <form id="schedule-form" class="space-y-4">
+          <form id="schedule-form" class="space-y-4 text-sm">
             <div>
               <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Judul Agenda / Kegiatan</label>
               <input name="title" required maxlength="120" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-200" placeholder="Contoh: Ronda Malam Reguler Kelompok A">
@@ -191,7 +195,7 @@
 
         <section class="bg-white border border-slate-200/80 rounded-3xl shadow-soft overflow-hidden">
           <div class="p-5 border-b border-slate-100 flex items-center justify-between">
-            <h2 class="font-black text-slate-900">Daftar Agenda & Ronda Aktif</h2>
+            <h2 class="font-black text-slate-900 text-sm sm:text-base">Daftar Agenda & Ronda Aktif</h2>
             <span id="schedule-total" class="text-xs font-semibold px-3 py-1 bg-slate-100 rounded-full text-slate-600">0 Item</span>
           </div>
           <div id="admin-schedule-list" class="divide-y divide-slate-100"></div>
@@ -199,13 +203,13 @@
       </div>
 
       <!-- TAB 3: TRANSPARANSI KEUANGAN -->
-      <div id="tab-content-finance" class="space-y-8 hidden">
-        <section class="bg-white border border-slate-200/80 rounded-3xl shadow-soft p-6">
+      <div id="tab-content-finance" class="space-y-6 hidden">
+        <section class="bg-white border border-slate-200/80 rounded-3xl shadow-soft p-5 sm:p-6">
           <div class="mb-5 pb-3 border-b border-slate-100">
-            <h2 class="text-xl font-black text-slate-900">Tambah Transaksi Kas Warga</h2>
+            <h2 class="text-lg sm:text-xl font-black text-slate-900">Tambah Transaksi Kas Warga</h2>
             <p class="text-xs text-slate-500 mt-0.5">Catatan pemasukan atau pengeluaran dana RT 003 / RW 002.</p>
           </div>
-          <form id="finance-form" class="space-y-4">
+          <form id="finance-form" class="space-y-4 text-sm">
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Tanggal Transaksi</label>
@@ -245,7 +249,7 @@
 
         <section class="bg-white border border-slate-200/80 rounded-3xl shadow-soft overflow-hidden">
           <div class="p-5 border-b border-slate-100 flex items-center justify-between">
-            <h2 class="font-black text-slate-900">Catatan Transaksi Dipublikasikan</h2>
+            <h2 class="font-black text-slate-900 text-sm sm:text-base">Catatan Transaksi Dipublikasikan</h2>
             <span id="finance-total" class="text-xs font-semibold px-3 py-1 bg-slate-100 rounded-full text-slate-600">0 Transaksi</span>
           </div>
           <div class="table-scroll">
