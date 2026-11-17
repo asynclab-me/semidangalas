@@ -101,6 +101,37 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media (max-width: 640px) {
+  .table-scroll th,
+  .table-scroll td {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    vertical-align: middle;
+  }
+
+  .table-scroll th:first-child,
+  .table-scroll td:first-child,
+  .table-scroll th:nth-child(3),
+  .table-scroll td:nth-child(3),
+  .table-scroll th:nth-child(4),
+  .table-scroll td:nth-child(4),
+  .table-scroll th:nth-child(5),
+  .table-scroll td:nth-child(5) {
+    white-space: nowrap;
+  }
+
+  .table-scroll td:nth-child(2) {
+    min-width: 175px;
+    word-break: normal;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
