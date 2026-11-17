@@ -1,6 +1,6 @@
-# Portal Informasi Warga Semidang Alas (RT 003 / RW 002)
+# Portal Informasi Warga Semidang Alas
 
-Portal Informasi Warga Resmi untuk lingkungan RT 003 / RW 002 Desa Semidang Alas. Aplikasi web statis berkinerja tinggi ini berfungsi sebagai pusat penyampaian pengumuman warga, agenda kegiatan/ronda, serta transparansi laporan kas lingkungan secara publik dan dinamis.
+Portal Informasi Warga Resmi untuk lingkungan Desa Semidang Alas. Aplikasi web statis berkinerja tinggi ini berfungsi sebagai pusat penyampaian pengumuman warga, agenda kegiatan/ronda, serta transparansi laporan kas lingkungan secara publik dan dinamis.
 
 ---
 
