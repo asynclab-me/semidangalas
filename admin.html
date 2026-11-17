@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Panel Pengurus — Portal Informasi Warga Semidang Alas</title>
-  <meta name="description" content="Panel Pengurus Resmi Portal Informasi Warga RT 003 / RW 002 Desa Semidang Alas.">
+  <meta name="description" content="Panel Pengurus Resmi Portal Informasi Warga Desa Semidang Alas.">
   <meta name="theme-color" content="#0f172a">
   <link rel="icon" href="public/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
@@ -29,8 +29,8 @@
           <img src="public/logo-pagaralam.png" alt="Logo Komunitas" class="w-full h-full object-cover">
         </div>
         <div>
-          <p class="font-extrabold text-xs sm:text-base leading-tight">Panel Pengurus RT 003</p>
-          <p class="text-[11px] sm:text-xs text-slate-400">Semidang Alas</p>
+          <p class="font-extrabold text-xs sm:text-base leading-tight">Panel Pengurus</p>
+          <p class="text-[11px] sm:text-xs text-slate-400">Desa Semidang Alas</p>
         </div>
       </div>
       <a href="index.html" class="text-xs sm:text-sm px-3.5 py-2 rounded-xl bg-white/10 border border-white/15 hover:bg-white/20 font-semibold transition-all shrink-0">Lihat Website</a>
@@ -171,7 +171,7 @@
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Lokasi Pelaksanaan</label>
-                <input name="location" maxlength="120" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-200" placeholder="Contoh: Pos Ronda RT 003">
+                <input name="location" maxlength="120" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-200" placeholder="Contoh: Pos Ronda Lingkungan">
               </div>
               <div>
                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Jenis Agenda</label>
@@ -207,7 +207,7 @@
         <section class="bg-white border border-slate-200/80 rounded-3xl shadow-soft p-5 sm:p-6">
           <div class="mb-5 pb-3 border-b border-slate-100">
             <h2 class="text-lg sm:text-xl font-black text-slate-900">Tambah Transaksi Kas Warga</h2>
-            <p class="text-xs text-slate-500 mt-0.5">Catatan pemasukan atau pengeluaran dana RT 003 / RW 002.</p>
+            <p class="text-xs text-slate-500 mt-0.5">Catatan pemasukan atau pengeluaran dana kas warga.</p>
           </div>
           <form id="finance-form" class="space-y-4 text-sm">
             <div class="grid sm:grid-cols-2 gap-4">
@@ -234,7 +234,7 @@
               </div>
               <div>
                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Kategori Transaksi</label>
-                <input name="category" maxlength="80" value="Kas RT" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-200">
+                <input name="category" maxlength="80" value="Kas Warga" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-200">
               </div>
             </div>
             <div>
@@ -253,14 +253,14 @@
             <span id="finance-total" class="text-xs font-semibold px-3 py-1 bg-slate-100 rounded-full text-slate-600">0 Transaksi</span>
           </div>
           <div class="table-scroll">
-            <table class="min-w-full text-sm">
-              <thead class="bg-slate-50 text-slate-500 font-bold uppercase text-xs">
+            <table class="min-w-full text-xs sm:text-sm">
+              <thead class="bg-slate-50 text-slate-500 font-bold uppercase text-[11px] sm:text-xs">
                 <tr>
-                  <th class="text-left px-5 py-3">Tanggal</th>
-                  <th class="text-left px-5 py-3">Keterangan</th>
-                  <th class="text-left px-5 py-3">Jenis</th>
-                  <th class="text-right px-5 py-3">Nominal</th>
-                  <th class="text-right px-5 py-3">Aksi</th>
+                  <th class="text-left px-3 sm:px-5 py-2.5 sm:py-3 whitespace-nowrap">Tanggal</th>
+                  <th class="text-left px-3 sm:px-5 py-2.5 sm:py-3">Keterangan</th>
+                  <th class="text-left px-3 sm:px-5 py-2.5 sm:py-3 whitespace-nowrap">Jenis</th>
+                  <th class="text-right px-3 sm:px-5 py-2.5 sm:py-3 whitespace-nowrap">Nominal</th>
+                  <th class="text-right px-3 sm:px-5 py-2.5 sm:py-3 whitespace-nowrap">Aksi</th>
                 </tr>
               </thead>
               <tbody id="admin-finance-table"></tbody>
