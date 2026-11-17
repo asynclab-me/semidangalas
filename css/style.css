@@ -101,6 +101,26 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+@media (max-width: 640px) {
+  .finance-responsive-table th,
+  .finance-responsive-table td {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    vertical-align: top;
+  }
+
+  .finance-responsive-table .col-desc {
+    min-width: 7.5rem;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .finance-responsive-table .col-cat {
+    line-height: 1.35;
+    word-break: break-word;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
